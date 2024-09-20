@@ -5,7 +5,7 @@ export default function blocs () {
     return(
         <div>
             <Header />
-            <h1>Blocs Page</h1>
+            
         </div>
     );
 }
