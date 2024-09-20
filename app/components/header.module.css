@@ -31,6 +31,10 @@
 }
 
 @media (max-width:640px){
+    .height{
+        width: 100%;
+        height: 283px;
+    }
     .menu{
         display: block;
     }

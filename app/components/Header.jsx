@@ -6,7 +6,7 @@ export const Header = () => {
     <div>
       <header className={`${styles.header} `}>
         <nav className={`${styles.nav} flex justify-between w-full items-center text-center`}>
-          <div className="flex items-center ml-2 text-center ml-14">
+          <div className="flex items-center text-center ml-14 mt-3">
             <img
               src="/assets/logo.svg"
               alt=""
@@ -30,7 +30,7 @@ export const Header = () => {
             height={23}
             className={`${styles.menu}  mr-3 mt-3`}
           />
-          <div className="flex items-center text-center gap-[50px] mr-12">
+          <div className="flex items-center text-center gap-[50px] mr-12 mt-3">
             <ul className="flex gap-[50px]">
               <li className="font-bold leading-10 text-2xl  text-white">Acceuil</li>
               <li className="font-bold leading-10 text-2xl  text-white">Menu</li>
@@ -42,7 +42,7 @@ export const Header = () => {
               </li> */}
             </ul>
             <button className="font-bold text-base leading-9 rounded-xl bg-red-600 h-[47px] w-[158px] text-white ">
-              <Link href="./">Aller dans album</Link>
+              <Link href=""></Link>Reservation
             </button>
           </div>
         </nav>
