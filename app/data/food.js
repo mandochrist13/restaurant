@@ -10,7 +10,7 @@ const Food = [
     },
     {
         id:2,
-        titre: "pizza aux feuilles de manioc",
+        titre: "Pizza aux feuilles de manioc",
         photo:  "/assets/food2.png",
          
     },

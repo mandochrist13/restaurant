@@ -58,8 +58,7 @@ export const Header = () => {
         <div className="px-4 flex flex-col justify-center  lg:w-[70%] py-[10%] space-y-6">
           <div className="space-y-3 items-center flex flex-col">
             <h1 className="text-3xl lg:text-7xl font-serif  text-black text-center">
-              Bienvenue à vous chez <span className="bg-yellow-300 text-white px-2">Saveur Bantu!</span> 
-            </h1>
+              Bienvenue à vous chez Saveur Bantu!            </h1>
             <p className="text-lg text-black text-center lg:text-2xl">
               Partenaire de vos papilles gustative...
             </p>

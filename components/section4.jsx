@@ -1,7 +1,11 @@
 export default function section4() {
   return (
-    <section className="bg-white flex-col justify-center items-center md:mt-20 ">
-      <div className="mb-6">
+    <section style={{ backgroundImage: "url(/assets/plat.png)" }} className="bg-black space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-80 flex flex-col justify-center items-center mt-20 py-10 lg:py-20 ">
+<h1 className="text-2xl md:text-5xl font-bold md:px-20 text-center">Êtes-vous prêt à commander votre meilleur plat?</h1>
+<button className=" text-base lg:text-2xl rounded-full bg-red-600 hover:bg-red-800 px-4 py-1 text-white ">
+              Commander
+            </button>
+      {/* <div className="mb-6">
         <div className="flex flex-col justify-center items-center mt-8">
           <h1 className="text-center text-3xl lg:text-5xl text-red-600 font-bold ">
             Philosophie
@@ -40,7 +44,7 @@ export default function section4() {
             reflétant notre amour pour la cuisine gabonaise.
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

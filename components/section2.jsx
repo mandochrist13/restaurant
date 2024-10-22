@@ -19,8 +19,8 @@ export default function section2() {
               <Image
               src={tab.photo}
               alt="food"
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
                className="w-full flex justify-center rounded-lg items-center"
                 
               />
