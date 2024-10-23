@@ -1,3 +1,5 @@
+"use client"
+
 import { Header } from "../components/Header";
 import  Story  from "../components/story";
 import  Section1  from "../components/section1";
@@ -6,7 +8,7 @@ import  Section3  from "../components/section3";
 import  Section4  from "../components/section4";
 import  Footer  from "../components/Footer";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="bg-white w-full min-h-svh">
       <Header />

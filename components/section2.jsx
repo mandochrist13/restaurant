@@ -24,9 +24,9 @@ export default function section2() {
                className="w-full flex justify-center rounded-lg items-center"
                 
               />
-              <div className="flex flex-col justify-between space-y-3 ">
+              <div className="flex flex-col justify-between h-full space-y-3 ">
                 <h1 className="text-black text-lg font-bold">{tab.titre}</h1>
-                <p className="text-green-500 font-extrabold font-mono rounded-lg p-2 bg-yellow-100 text-center text-[13px]">
+                <p className="text-green-600 animate-pulse font-extrabold font-mono rounded-lg p-2 bg-yellow-200 text-center text-[13px]">
                   Disponible dès maintenant
                 </p>
               </div>

@@ -13,7 +13,7 @@ export default function section3() {
         <div className="gap-10 flex flex-col md:grid md:grid-cols-2 justify-around items-center mx-auto px-10 md:px-20">
           {Team.map((tab) => (
             <div key={tab.id} className="h-full ">
-              <div className="flex rounded-md space-y-4 w-full h-full bg-gradient-to-r from-amber-400 to-amber-200 bg-white">
+              <div className="flex rounded-md w-full h-full bg-gradient-to-r from-amber-400 to-amber-200 justify-between ">
                 <Image
                   src={tab.photo}
                   width={140}
@@ -21,7 +21,7 @@ export default function section3() {
                   alt="img"
                   className=""
                 />
-                <div className=" w-full space-y-2">
+                <div className=" w-full py-6 space-y-2">
                   <h1 className="md:text-2xl font-bold text-black text-center">
                     {tab.nom}
                   </h1>
