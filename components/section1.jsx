@@ -1,32 +1,10 @@
-"use client"
 
-import { motion, useInView } from "framer-motion";
 import { Service } from "../app/data/serv";
-import {useRef}  from "react";
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-    },
-  },
-};
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
 
 export default function Section1() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // Trigger animation only once when the section is visible
+   // Trigger animation only once when the section is visible
   return (
     <div className="my-20 ">
       <div className="flex flex-col justify-center items-center">
@@ -34,17 +12,15 @@ export default function Section1() {
           Parcourez Notre Menu
         </h1>
       </div>
-      <motion.section
-      ref={ref}
+      <section
+      
         className="grid md:grid-cols-2 lg:grid-cols-4 items-center mx-auto px-10 md:px-20 justify-center gap-5"
-        variants={container}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}>
+        >
         {Service.map((tab) => (
-          <motion.div
+          <div
             key={tab.id}
-            className="border-gray-200 flex flex-col  items-center max-w-[300px] p-6 space-y-7 border rounded-lg"
-            variants={item}>
+            className="border-gray-200 animate-levitate transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 flex flex-col h-full items-center max-w-[300px] p-6 space-y-7 border rounded-lg"
+           >
             <div className="border border-yellow-400 w-[75px] p-3 rounded-full flex justify-center items-center">
               {tab.photo}
             </div>
@@ -54,9 +30,9 @@ export default function Section1() {
                 {tab.description}
               </p>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.section>
+      </section>
     </div>
   );
 }
