@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { Service } from "../app/data/serv";
-import UseRef  from "react";
+import {useRef}  from "react";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -25,7 +25,7 @@ const item = {
 };
 
 export default function Section1() {
-  const ref = UseRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true }); // Trigger animation only once when the section is visible
   return (
     <div className="my-20 ">

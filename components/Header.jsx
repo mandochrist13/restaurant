@@ -83,8 +83,9 @@ export const Header = () => {
         style={{ backgroundImage: "url(/assets/bg.png)" }}
         className="md:flex md:flex-col justify-center bg-cover bg-center items-center"
       >
+        <div className="bg-yellow-50 bg-opacity-50">
         <motion.div
-          className="px-4 flex flex-col justify-center  lg:w-[70%] py-[10%] space-y-6"
+          className="px-4  flex flex-col justify-center  lg:px-[20%] py-[10%] space-y-6"
           initial={{ opacity: 0, scale: 0 }}
           animate={{
             opacity: 1,
@@ -97,7 +98,7 @@ export const Header = () => {
           }}
         >
           <div className="space-y-3 items-center flex flex-col">
-            <h1 className="text-3xl bg-yellow-50 p-2 md:w-[70%] lg:w-full md:bg-transparent bg-opacity-50 rounded-lg lg:text-7xl md:text-5xl font-serif  text-black text-center">
+            <h1 className="text-3xl  p-2 md:w-[70%] lg:w-full md:bg-transparent  rounded-lg lg:text-7xl md:text-5xl font-serif  text-black text-center">
               Bienvenue à vous chez Saveur Bantu!
             </h1>
             <p className="text-lg text-black text-center lg:text-2xl">
@@ -113,6 +114,8 @@ export const Header = () => {
             </button>
           </div>
         </motion.div>
+        </div>
+        
       </div>
     </header>
   );
