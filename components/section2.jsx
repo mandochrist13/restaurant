@@ -14,21 +14,27 @@ export default function section2() {
           {Food.map((tab) => (
             <div
               key={tab.id}
-              className="flex flex-col h-full max-w-[300px] p-6 space-y-7 rounded-lg"
+              className="flex flex-col h-full max-w-[300px] p-6 rounded-lg"
             >
               <Image
-              src={tab.photo}
-              alt="food"
-              width={1000}
-              height={1000}
-               className="w-full flex justify-center rounded-lg items-center"
-                
+                src={tab.photo}
+                alt="food"
+                width={1000}
+                height={1000}
+                className="w-full flex justify-center rounded-lg items-center"
               />
-              <div className="flex flex-col justify-between h-full space-y-3 ">
-                <h1 className="text-black text-lg font-bold">{tab.titre}</h1>
-                <p className="text-green-600 animate-pulse font-extrabold font-mono rounded-lg p-2 bg-yellow-200 text-center text-[13px]">
+              <div className="flex mt-[-50px] w-full flex-col h-full">
+                <Image
+                  src="/assets/pub.png"
+                  alt="food"
+                  width={1000}
+                  height={1000}
+                  className=" w-[100px] h-auto"
+                />
+                <h1 className="text-black text-[20px] w-full mt-[-15px] font-bold">{tab.titre}</h1>
+                {/* <p className="text-green-600 animate-pulse font-extrabold font-mono rounded-lg p-2 bg-yellow-200 text-center text-[13px]">
                   Disponible dès maintenant
-                </p>
+                </p> */}
               </div>
             </div>
           ))}
