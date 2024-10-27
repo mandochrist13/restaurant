@@ -21,7 +21,7 @@ export default function section3() {
                   alt="img"
                   className=""
                 />
-                <div className=" w-full py-6 space-y-2">
+                <div className=" w-full py-6 px-3 space-y-2">
                   <h1 className="md:text-2xl font-bold text-black text-center">
                     {tab.nom}
                   </h1>
