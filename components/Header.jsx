@@ -37,7 +37,7 @@ export const Header = () => {
             alt="logo"
             width={1000}
             height={1000}
-            className="w-[60px] md:w-[100px] my-2 h-auto"
+            className="w-[60px] md:w-[150px] my-2 h-auto"
           />
         </div>
         <div className="relative flex justify-end w-full" ref={menuRef}>

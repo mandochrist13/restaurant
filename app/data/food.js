@@ -1,10 +1,8 @@
 
-
-
 const Food = [
     {
         id:1,
-        titre: "Omelette à l'odika",
+        titre: "Omelette au Nkumu",
         photo:  "/assets/food1.png",
      
     },
@@ -16,7 +14,7 @@ const Food = [
     },
     {
         id:3,
-        titre: "Glace à la crème au Nkumu",
+        titre: "Glace à la crème à l'Odika",
         photo:  "/assets/food3.png",
          
     },
