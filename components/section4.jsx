@@ -11,7 +11,7 @@ import {
 } from "@nextui-org/react";
 import { Field } from "@headlessui/react";
 
-export default function section4() {
+export default function Section4() {
   const [selectedKeys, setSelectedKeys] = React.useState(new Set(["text"]));
 
   const selectedValue = React.useMemo(
