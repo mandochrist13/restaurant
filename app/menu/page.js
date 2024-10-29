@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Mets from "../../components/Mets";
+import Section4 from "@/components/section4";
+
 export default function Page() {
   return (
     <section
@@ -16,7 +18,7 @@ export default function Page() {
         />
         <h1 className="text-[#DC2626] text-5xl md:text-7xl font-bold">Menu</h1>
       </div>
-      <Mets image={"/assets/plat3.png"} text1={"lorem ipsum dolor sit amet, consectetur adip"} text2={"lorem ipsum dolor sit amet, consectetur adip"} text3={"lorem ipsum dolor sit amet, consectetur adip"}/>
+      <Mets image={"/assets/plat3.png"} text1={"Aubergine au poisson fumé"} text2={"Feuille de manioc salé"} text3={"Poulet au four"}/>
       <div className="space-y-5 ">
       <div className="md:flex md:flex-row-reverse justify-between items-center">
         <div className=" md:w-[50%]">
@@ -28,22 +30,23 @@ export default function Page() {
             className="rounded-xl h-auto w-full"
           />
         </div>
-        <div className="md:ml-[5%] flex-col space-y-4 px-3 justify-center items-center ">
+        <div className="flex-col space-y-4 px-3 md:px-0 justify-center items-center ">
         
-          <p className="md:text-[10px] rounded p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
-          lorem ipsum dolor sit amet, consectetur adip
+          <p className="md:text-[10px] rounded-xl md:rounded-r-xl md:rounded-none p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
+          Sauce Gombo
+                    </p>
+          <p className="md:text-[10px] rounded-xl md:rounded-r-xl md:rounded-none p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
+          Le paquet d'eau douce
           </p>
-          <p className="md:text-[10px] rounded p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
-          lorem ipsum dolor sit amet, consectetur adip
-          </p>
-          <p className="md:text-[10px] rounded p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
-            lorem ipsum dolor sit amet, consectetur adip
+          <p className="md:text-[10px] rounded-xl md:rounded-r-xl md:rounded-none p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
+            Le Nkumu Royal
           </p>
         </div> 
       </div>
       <div className="bg-[#DC2626] w-[70%] rounded-r-md p-2"></div>
     </div>
-      <Mets image={"/assets/plat1.png"} text1={"lorem ipsum dolor sit amet, consectetur adip"} text2={"lorem ipsum dolor sit amet, consectetur adip"} text3={"lorem ipsum dolor sit amet, consectetur adip"}/>
+      <Mets image={"/assets/plat1.png"} text1={"La sauce d'arachide"} text2={"L'oseil à la banane pilé"} text3={"Poisson salé"}/>
+      <Section4 />
     </section>
   );
 }

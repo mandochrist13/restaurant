@@ -22,12 +22,12 @@ export default function Section4() {
   return (
     <section
       style={{ backgroundImage: "url(/assets/plat.png)" }}
-      className="bg-black space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-80 flex flex-col justify-center items-center mt-20 px-5 py-10 md:px-20 lg:py-20 "
+      className="bg-black space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-70 flex flex-col justify-center items-center mt-20 px-5 py-10 md:px-20 lg:py-20 "
     >
       <h1 id="form" className="text-xl md:text-4xl font-bold px-5 lg:w-[75%]  md:px-15 text-center">
         Êtes-vous prêt à commander votre meilleur plat?
       </h1>
-      <div className="w-full  rounded-md bg-gradient-to-r from-amber-400 to-amber-200  px-4 py-5 lg:px-8">
+      <div className="w-full lg:w-[60%] rounded-lg bg-opacity-60 bg-black px-4 py-5 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -38,9 +38,9 @@ export default function Section4() {
             className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className=" text-center">
-          <h2 className="text-balance text-2xl md:text-4xl font-semibold tracking-tight text-gray-900">
-            Formulaire de réservation
+        <div className="bg-white text-center">
+          <h2 className="text-balance rounded-ee-lg text-2xl md:text-4xl font-semibold tracking-tight text-black">
+            FORMULAIRE DE RESERVATION
           </h2>
           {/* <p className="mt-2 text-lg leading-8 text-gray-600">
             Aute magna irure deserunt veniam aliqua magna enim voluptate.
@@ -51,7 +51,7 @@ export default function Section4() {
             <div>
               <label
                 htmlFor="first-name"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-white"
               >
                 Nom
               </label>
@@ -61,14 +61,14 @@ export default function Section4() {
                   name="first-name"
                   type="text"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-white"
               >
                 Prénom
               </label>
@@ -78,7 +78,7 @@ export default function Section4() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function Section4() {
             <div className="w-full">
               <label
                 htmlFor="first-name"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-white"
               >
                 Nombre de personne
               </label>
@@ -118,7 +118,7 @@ export default function Section4() {
             <div>
               <label
                 htmlFor="phone-number"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-white"
               >
                 Numéro de téléphone
               </label>
@@ -128,14 +128,14 @@ export default function Section4() {
                   name="phone-number"
                   type="tel"
                   autoComplete="tel"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="company"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-white"
               >
                 Date de réservation
               </label>
@@ -145,14 +145,14 @@ export default function Section4() {
                   name="company"
                   type="text"
                   autoComplete="organization"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="last-name"
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-white"
               >
                 Heure de réservation
               </label>
