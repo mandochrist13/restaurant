@@ -33,10 +33,10 @@ export default function Page() {
         <div className="flex-col space-y-4 px-3 md:px-0 justify-center items-center ">
         
           <p className="md:text-[10px] rounded-xl md:rounded-r-xl md:rounded-none p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
-          Sauce Gombo
+          Le concombre à la sardine fumé
                     </p>
           <p className="md:text-[10px] rounded-xl md:rounded-r-xl md:rounded-none p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
-          Le paquet d'eau douce
+          Le paquet d&apos;eau douce
           </p>
           <p className="md:text-[10px] rounded-xl md:rounded-r-xl md:rounded-none p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
             Le Nkumu Royal

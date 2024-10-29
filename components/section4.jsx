@@ -24,22 +24,27 @@ export default function Section4() {
       style={{ backgroundImage: "url(/assets/plat.png)" }}
       className="bg-black space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-70 flex flex-col justify-center items-center mt-20 px-5 py-10 md:px-20 lg:py-20 "
     >
-      <h1 id="form" className="text-xl md:text-4xl font-bold px-5 lg:w-[75%]  md:px-15 text-center">
+      <h1
+        id="form"
+        className="text-xl md:text-4xl font-bold px-5 lg:w-[75%]  md:px-15 text-center"
+      >
         Êtes-vous prêt à commander votre meilleur plat?
       </h1>
-      <div className="w-full lg:w-[60%] rounded-lg bg-opacity-60 bg-black px-4 py-5 lg:px-8">
+      <div className="w-full lg:w-[60%] rounded-lg bg-opacity-60 bg-black px-4 pb-5 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         >
           <div
             style={{
-              clipPath:"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",}}
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
             className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="bg-white text-center">
-          <h2 className="text-balance rounded-ee-lg text-2xl md:text-4xl font-semibold tracking-tight text-black">
+        <div className="bg-white rounded-b-lg p-2 md:mx-[15%] text-center">
+          <h2 className="text-balance  text-2xl md:text-4xl font-semibold tracking-tight text-black">
             FORMULAIRE DE RESERVATION
           </h2>
           {/* <p className="mt-2 text-lg leading-8 text-gray-600">
@@ -93,7 +98,10 @@ export default function Section4() {
               <div className="mt-2.5">
                 <Dropdown className="border block text-sm font-semibold leading-6 text-gray-900">
                   <DropdownTrigger>
-                    <Button variant="bordered" className="block border w-full border-slate-300 bg-white rounded-md text-sm font-semibold leading-6 text-gray-900">
+                    <Button
+                      variant="bordered"
+                      className="block border w-full border-slate-300 bg-white rounded-md text-sm font-semibold leading-6 text-gray-900"
+                    >
                       {selectedValue}
                     </Button>
                   </DropdownTrigger>
