@@ -24,7 +24,7 @@ export default function Section4() {
       style={{ backgroundImage: "url(/assets/plat.png)" }}
       className="bg-black space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-80 flex flex-col justify-center items-center mt-20 px-5 py-10 md:px-20 lg:py-20 "
     >
-      <h1 className="text-xl md:text-4xl font-bold px-5 lg:w-[75%]  md:px-15 text-center">
+      <h1 id="form" className="text-xl md:text-4xl font-bold px-5 lg:w-[75%]  md:px-15 text-center">
         Êtes-vous prêt à commander votre meilleur plat?
       </h1>
       <div className="w-full  rounded-md bg-gradient-to-r from-amber-400 to-amber-200  px-4 py-5 lg:px-8">

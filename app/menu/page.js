@@ -28,7 +28,7 @@ export default function Page() {
             className="rounded-xl h-auto w-full"
           />
         </div>
-        <div className="md:mr-[5%] flex-col space-y-4 px-3 justify-center items-center ">
+        <div className="md:ml-[5%] flex-col space-y-4 px-3 justify-center items-center ">
         
           <p className="md:text-[10px] rounded p-3 text-center bg-[#DC2626] lg:text-[18px] text-white">
           lorem ipsum dolor sit amet, consectetur adip
