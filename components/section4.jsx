@@ -30,7 +30,7 @@ export default function Section4() {
       >
         Êtes-vous prêt à commander votre meilleur plat?
       </h1>
-      <div className="w-full lg:w-[60%] rounded-lg bg-opacity-60 bg-black px-4 pb-5 lg:px-8">
+      <div className="w-full lg:w-[60%] rounded-lg bg-gradient-to-r from-amber-400 to-amber-200 px-4 pb-5 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -51,158 +51,75 @@ export default function Section4() {
             Aute magna irure deserunt veniam aliqua magna enim voluptate.
           </p> */}
         </div>
-        <form action="#" method="POST" className=" mt-16 md:px-5 sm:mt-20">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-              <label
-                htmlFor="first-name"
-                className="block text-sm font-semibold leading-6 text-white"
-              >
-                Nom
-              </label>
-              <div className="mt-2.5">
-                <input
-                  id="first-name"
-                  name="first-name"
-                  type="text"
-                  autoComplete="given-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+        <div
+          className="booking-area section-bg pt-20 pb-20"
+          style={{
+            backgroundImage: "url('/assets/img/gallery/section_bg04.png')",
+          }}
+        >
+          <div className="container mx-auto">
+            
+            <div className="flex justify-center">
+              <div className="w-full">
+                <form action="#">
+                  <div className="booking-wrap flex flex-col md:flex-row justify-between items-center">
+                    {/* Single Select Box for Person */}
+                    <div className="single-select-box mb-7 flex-1 mx-2">
+                      <div className="select-this">
+                        <div className="select-itms relative">
+                          <div className="select-icon absolute left-3 top-1/2 transform -translate-y-1/2">
+                            <i className="ti-user text-yellow-500"></i>
+                          </div>
+                          <select
+                            name="persone"
+                            id="select1"
+                            className="appearance-none text-black pl-10 pr-4 py-2 border rounded w-full"
+                          >
+                            <option value="">Persone</option>
+                            <option value="2">Persone 2</option>
+                            <option value="3">Persone 3</option>
+                            <option value="4">Persone 4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Date Picker */}
+                    <div className="single-select-box mb-7 flex-1 mx-2">
+                      <div className="boking-datepicker">
+                        <input
+                          id="datepicker1"
+                          placeholder="Date"
+                          type="text"
+                          className="border text-black rounded w-full py-2 px-3"
+                        />
+                      </div>
+                    </div>
+                    {/* Time Picker */}
+                    <div className="single-select-box mb-7 flex-1 mx-2">
+                      <div className="boking-datepicker">
+                        <input
+                          id="timepicker"
+                          placeholder="Time"
+                          type="text"
+                          className="border text-black rounded w-full py-2 px-3"
+                        />
+                      </div>
+                    </div>
+                    {/* Book Now Button */}
+                    <div className="single-select-box mb-7 flex-1 mx-2">
+                      <button
+                        type="submit"
+                        className="btn select-btn bg-red-600 text-white rounded py-2 px-4 hover:bg-yellow-600 transition"
+                      >
+                        Réserver maintenant
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-semibold leading-6 text-white"
-              >
-                Prénom
-              </label>
-              <div className="mt-2.5">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            <div className="w-full">
-              <label
-                htmlFor="first-name"
-                className="block text-sm font-semibold leading-6 text-white"
-              >
-                Nombre de personne
-              </label>
-              <div className="mt-2.5">
-                <Dropdown className="border block text-sm font-semibold leading-6 text-gray-900">
-                  <DropdownTrigger>
-                    <Button
-                      variant="bordered"
-                      className="block border w-full border-slate-300 bg-white rounded-md text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      {selectedValue}
-                    </Button>
-                  </DropdownTrigger>
-                  <DropdownMenu
-                    className="block rounded-md bg-white text-sm font-semibold leading-6 text-gray-900"
-                    aria-label="Single selection example"
-                    variant="flat"
-                    disallowEmptySelection
-                    selectionMode="single"
-                    selectedKeys={selectedKeys}
-                    onSelectionChange={setSelectedKeys}
-                  >
-                    <DropdownItem key="1 Personne">1 Personne</DropdownItem>
-                    <DropdownItem key="2 Personnes">2 Personnes</DropdownItem>
-                    <DropdownItem key="3 Personnes">3 Personnes</DropdownItem>
-                    <DropdownItem key="4 Personnes">4 Personnes</DropdownItem>
-                    {/* <DropdownItem key="iteration">Iteration</DropdownItem> */}
-                  </DropdownMenu>
-                </Dropdown>
-              </div>
-            </div>
-            <div>
-              <label
-                htmlFor="phone-number"
-                className="block text-sm font-semibold leading-6 text-white"
-              >
-                Numéro de téléphone
-              </label>
-              <div className="relative mt-2.5">
-                <input
-                  id="phone-number"
-                  name="phone-number"
-                  type="tel"
-                  autoComplete="tel"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                htmlFor="company"
-                className="block text-sm font-semibold leading-6 text-white"
-              >
-                Date de réservation
-              </label>
-              <div className="mt-2.5">
-                <input
-                  id="company"
-                  name="company"
-                  type="text"
-                  autoComplete="organization"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                htmlFor="last-name"
-                className="block text-sm font-semibold leading-6 text-white"
-              >
-                Heure de réservation
-              </label>
-              <div className="mt-2.5">
-                <input
-                  id="last-name"
-                  name="last-name"
-                  type="text"
-                  autoComplete="family-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            {/* <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block text-sm font-semibold leading-6 text-gray-900"
-              >
-                Message
-              </label>
-              <div className="mt-2.5">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  defaultValue={""}
-                />
-              </div>
-            </div> */}
-            <Field className="flex gap-x-4 sm:col-span-2"></Field>
           </div>
-          <div className="mt-10">
-            <button
-              type="submit"
-              className="block w-full rounded-md bg-red-600 hover:bg-red-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Réserver
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
 
       {/* <button className=" text-base lg:text-2xl rounded-full  px-4 py-1 text-white ">
