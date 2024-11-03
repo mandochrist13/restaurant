@@ -106,14 +106,14 @@ export default function Nav() {
                         A propos
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href="#"
                         className="md:text-lg text-black hover:text-red-500 transition-all ease-in-out"
                       >
                         Contact
                       </Link>
-                    </li>
+                    </li> */}
 
                     <Link href="#form">
                       <button className="font-semibold text-[11px] rounded-full hover:bg-red-600 border border-red-600 py-1 px-4 hover:text-white text-red-600">
@@ -153,12 +153,12 @@ export default function Nav() {
             >
               A propos
             </a>
-            <a
+            {/* <a
               href="#"
               className=" md:text-base  text-black relative  hover:text-red-500 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-yellow-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-yellow-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
             >
               Contact
-            </a>
+            </a> */}
           </div>
           <button className="font-semibold text-sm lg:text-base rounded-full hover:bg-red-600 border border-red-600 py-1 px-4 hover:text-white text-red-600">
             <Link href="#form">Reserver</Link>

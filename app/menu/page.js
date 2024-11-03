@@ -119,6 +119,16 @@ export default function Page() {
               Dessert
             </button>
             </li>
+            <li>
+            <button
+              onClick={() => handleSectionClick('coffee')}
+              className={`nav-link text-white ${
+                activeSection === 'beverages' ? 'bg-[#DC2626]' : 'bg-yellow-500'
+              } rounded-md py-2 px-4 hover:bg-[#DC2626]`}
+            >
+              Petit déjeuner
+            </button>
+            </li>
           </ul>
         </div>
 
@@ -165,7 +175,7 @@ export default function Page() {
             {/* Menu Image Column */}
             <div className="hidden rounded-md lg:flex w-[30%]">
               <Image
-                src="/assets/menu-burger.jpg"
+                src="/assets/menu-burger-img.jpg"
                 width={1000}
                 height={1000}
                 alt="Mini Cheese Burger"
@@ -213,11 +223,11 @@ export default function Page() {
             </div>
 
             {/* Image Column for Snacks */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex">
               <Image
-                src="/assets/menu-snack.jpg"
-                width={140}
-                height={140}
+                src="/assets/menu-snack-img.jpg"
+                width={1000}
+                height={1000}
                 alt="Mini Cheese Burger"
                 className="w-full rounded-full"
               />
@@ -263,11 +273,61 @@ export default function Page() {
             </div>
 
             {/* Image Column for Beverages */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex">
               <Image
-                src="/assets/menu-beverage.jpg"
-                width={140}
-                height={140}
+                src="/assets/menu-beverage-img.jpg"
+                width={1000}
+                height={1000}
+                alt="Mini Cheese Burger"
+                className="w-full rounded-full"
+              />
+            </div>
+          </div>
+           )}
+
+{activeSection === 'coffee' && (
+             <div
+            
+            className="justify-center items-center flex flex-col md:flex-row gap-8 "
+          >
+            {/*  Menu Items Column  */}
+            <div className="space-y-8 px-5">
+            {Dessert.map((tab) => (
+              <div key={tab.id} className=" flex flex-col md:flex-row items-center gap-5">
+                <div className="menu-img w-20">
+                  <Image
+                    src={tab.photo}
+                    width={140}
+                    height={140}
+                    alt="Mini Cheese Burger"
+                    className="w-full rounded-full"
+                  />
+                </div>
+                <div className="w-full">
+                  <h3 className="text-sm md:text-xl font-bold relative">
+                    <span className="inline-block pr-1 text-black bg-white relative z-10">
+                     {tab.titre}
+                    </span>
+                    <strong className="inline-block pl-1 float-right text-yellow-500 bg-white relative z-10">
+                      {tab.prix}
+                    </strong>
+                    <span className="absolute top-3 left-0 w-full border-t-2 border-dotted border-black z-0"></span>
+                  </h3>
+                  <p className="text-sm md:text-xl mt-1 text-black text-left">
+                    Lorem ipsum dolor sit amet elit. Phasel nec preti facil
+                  </p>
+                </div>
+              </div>))}
+
+              
+            </div>
+
+            {/* Image Column for Beverages */}
+            <div className="hidden lg:flex">
+              <Image
+                src="/assets/menu-beverage-img.jpg"
+                width={1000}
+                height={1000}
                 alt="Mini Cheese Burger"
                 className="w-full rounded-full"
               />

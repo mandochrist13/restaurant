@@ -30,8 +30,8 @@ export default function Section4() {
       >
         Êtes-vous prêt à commander votre meilleur plat?
       </h1>
-      <div className="w-full lg:w-[60%] rounded-lg bg-gradient-to-r from-amber-400 to-amber-200 px-4 pb-5 lg:px-8">
-        <div
+      <div className="w-full max-w-[600px] rounded-lg bg-gradient-to-r from-amber-400 to-amber-200 px-4 lg:px-8">
+        {/* <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         >
@@ -42,29 +42,56 @@ export default function Section4() {
             }}
             className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
           />
-        </div>
-        <div className="bg-white rounded-b-lg p-2 md:mx-[15%] text-center">
+        </div> */}
+        {/* <div className="bg-white rounded-b-lg p-2 md:mx-[15%] text-center">
           <h2 className="text-balance  text-2xl md:text-4xl font-semibold tracking-tight text-black">
             FORMULAIRE DE RESERVATION
           </h2>
-          {/* <p className="mt-2 text-lg leading-8 text-gray-600">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
-          </p> */}
-        </div>
+          
+        </div> */}
         <div
-          className="booking-area section-bg pt-20 pb-20"
+          className="py-10"
           style={{
             backgroundImage: "url('/assets/img/gallery/section_bg04.png')",
           }}
         >
           <div className="container mx-auto">
-            
             <div className="flex justify-center">
               <div className="w-full">
                 <form action="#">
-                  <div className="booking-wrap flex flex-col md:flex-row justify-between items-center">
+                  <div className=" flex flex-col md:grid md:grid-cols-2 gap-5 justify-between items-center">
+                    <div className="w-full mb-7 flex-1 mx-2">
+                      <div className="boking-datepicker">
+                        <input
+                          id="datepicker1"
+                          placeholder="Nom"
+                          type="text"
+                          className="border text-black rounded w-full py-2 px-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full mb-7 flex-1 mx-2">
+                      <div className="boking-datepicker">
+                        <input
+                          id="datepicker1"
+                          placeholder="Numéro de téléphone"
+                          type="Number"
+                          className="border text-black rounded w-full py-2 px-3"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full mb-7 flex-1 mx-2">
+                      <div className="boking-datepicker">
+                        <input
+                          id="datepicker1"
+                          placeholder="Mail"
+                          type="mail"
+                          className="border text-black rounded w-full py-2 px-3"
+                        />
+                      </div>
+                    </div>
                     {/* Single Select Box for Person */}
-                    <div className="single-select-box mb-7 flex-1 mx-2">
+                    <div className="w-full mb-7 flex-1 mx-2">
                       <div className="select-this">
                         <div className="select-itms relative">
                           <div className="select-icon absolute left-3 top-1/2 transform -translate-y-1/2">
@@ -75,16 +102,16 @@ export default function Section4() {
                             id="select1"
                             className="appearance-none text-black pl-10 pr-4 py-2 border rounded w-full"
                           >
-                            <option value="">Persone</option>
-                            <option value="2">Persone 2</option>
-                            <option value="3">Persone 3</option>
-                            <option value="4">Persone 4</option>
+                            <option value="1">1 Personne</option>
+                            <option value="2"> 2 Personnes</option>
+                            <option value="3">3 Personnes</option>
+                            <option value="4">4 Personnes</option>
                           </select>
                         </div>
                       </div>
                     </div>
                     {/* Date Picker */}
-                    <div className="single-select-box mb-7 flex-1 mx-2">
+                    <div className="w-full mb-7 flex-1 mx-2">
                       <div className="boking-datepicker">
                         <input
                           id="datepicker1"
@@ -95,25 +122,25 @@ export default function Section4() {
                       </div>
                     </div>
                     {/* Time Picker */}
-                    <div className="single-select-box mb-7 flex-1 mx-2">
+                    <div className="w-full mb-7 flex-1 mx-2">
                       <div className="boking-datepicker">
                         <input
                           id="timepicker"
-                          placeholder="Time"
+                          placeholder="Heure"
                           type="text"
                           className="border text-black rounded w-full py-2 px-3"
                         />
                       </div>
                     </div>
                     {/* Book Now Button */}
-                    <div className="single-select-box mb-7 flex-1 mx-2">
-                      <button
-                        type="submit"
-                        className="btn select-btn bg-red-600 text-white rounded py-2 px-4 hover:bg-yellow-600 transition"
-                      >
-                        Réserver maintenant
-                      </button>
-                    </div>
+                  </div>
+                  <div className="w-full">
+                    <button
+                      type="submit"
+                      className="w-full bg-red-600 text-white rounded py-2 px-4 hover:bg-yellow-600 transition"
+                    >
+                      Réserver maintenant
+                    </button>
                   </div>
                 </form>
               </div>

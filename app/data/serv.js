@@ -8,25 +8,29 @@ const Service = [
         id:1,
         titre: "Petit déjeuner",
         photo:  <SiCoffeescript className="text-5xl text-yellow-400" />,
-        description: "Commencez la journée du bon pied avec notre petit-déjeuner complet et savoureux, fait pour vous énergiser jusqu’au déjeuner !", 
+        description: "Commencez la journée du bon pied avec notre petit-déjeuner complet et savoureux, fait pour vous énergiser jusqu’au déjeuner !",
+        lien: "/menu", 
     },
     {
         id:2,
         titre: "Déjeuner",
         photo:  <SiJusteat className="text-5xl text-yellow-400" />,
-        description: "Laissez-vous séduire par notre menu déjeuner, où fraîcheur et authenticité se rencontrent dans des plats généreux et délicieux !", 
+        description: "Laissez-vous séduire par notre menu déjeuner, où fraîcheur et authenticité se rencontrent dans des plats généreux et délicieux !",
+        lien: "/menu",  
     },
     {
         id:3,
         titre: "Boisson",
         photo:  <RiDrinksFill className="text-5xl text-yellow-400" />,
         description: "Rafraîchissez-vous avec nos cocktails maison, des saveurs uniques qui éveilleront vos papilles à chaque gorgée !", 
+        lien: "/menu", 
     },
     {
         id:4,
         titre: "Dessert",
         photo:  <GiCakeSlice className="text-5xl text-yellow-400" />,
         description: "Terminez en beauté avec nos desserts gourmands, une douce explosion de saveurs pour un moment de pur plaisir !", 
+        lien: "/menu", 
     }
     ]
 
