@@ -137,7 +137,7 @@ export default function Section4() {
                   <div className="w-full">
                     <button
                       type="submit"
-                      className="w-full bg-red-600 text-white rounded py-2 px-4 hover:bg-yellow-600 transition"
+                      className="w-full bg-red-600 text-white rounded py-2 px-4 hover:bg-red-400 transition"
                     >
                       Réserver maintenant
                     </button>
