@@ -22,7 +22,7 @@ export default function Section4() {
   return (
     <section
       style={{ backgroundImage: "url(/assets/plat.png)" }}
-      className="bg-black space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-70 flex flex-col justify-center items-center mt-20 px-5 py-10 md:px-20 lg:py-20 "
+      className="bg-black w-full space-y-8 bg-cover bg-center bg-blend-overlay bg-opacity-70 flex flex-col justify-center items-center mt-20 px-5 py-10 md:px-20 lg:py-20 "
     >
       <h1
         id="form"
