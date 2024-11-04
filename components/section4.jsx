@@ -75,7 +75,7 @@ export default function Section4() {
                         <input
                           id="datepicker1"
                           placeholder="Numéro de téléphone"
-                          type="Number"
+                          type="Phone Number"
                           className="border text-black rounded w-full py-2 px-3"
                         />
                       </div>

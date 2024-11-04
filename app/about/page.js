@@ -53,7 +53,7 @@ export default function Page() {
       </div>
       <div className="flex  flex-col justify-center w-full items-center space-y-5 px-5">
         <h1 className="flex text-yellow-400 text-xl md:text-4xl flex-col justify-center w-full items-center">
-          Saveurs Bantu c'est quoi?
+          Saveurs Bantu c&apos;est quoi?
         </h1>
         <p className="flex text-black text-center flex-col justify-center w-full items-center">
           Far far away, behind the word mountains, far from the countries

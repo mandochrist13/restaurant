@@ -9,9 +9,9 @@ export default function Section5() {
         <h1 className="text-xl md:text-2xl text-black text-center">
           Souscrivez à notre canal whatsapp
         </h1>
-        <button className="border hover:bg-green-400 bg-white border-green-400 rounded-2xl items-center px-3 py-2 space-x-5 flex">
-          <h1 className="text-green-500 hover:text-white">Rejoignez-nous</h1>
-          <FaWhatsapp className="text-3xl hover:text-white text-green-400" />
+        <button className="border duration-150 text-green-500 hover:text-white hover:bg-green-400 hover:scale-110 bg-white border-green-400 rounded-2xl items-center px-3 py-2 space-x-5 flex">
+          <h1>Rejoignez-nous</h1>
+          <FaWhatsapp className="text-3xl" />
         </button>
         <div className="flex space-x-4 items-center">
           <PiUserSound className="text-5xl text-yellow-400" />
