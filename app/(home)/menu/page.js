@@ -175,7 +175,7 @@ export default function Page() {
                         <span className="absolute top-3 left-0 w-full border-t-2 border-dotted border-black z-0"></span>
                       </h3>
                       <p className="text-sm md:text-xl mt-1 text-black text-left">
-                        Lorem ipsum dolor sit amet elit. Phasel nec preti facil
+                      {tab.description}
                       </p>
                     </div>
                   </div>
@@ -273,7 +273,7 @@ export default function Page() {
                         <span className="absolute top-3 left-0 w-full border-t-2 border-dotted border-black z-0"></span>
                       </h3>
                       <p className="text-sm md:text-xl mt-1 text-black text-left">
-                        Lorem ipsum dolor sit amet elit. Phasel nec preti facil
+                      {tab.description}
                       </p>
                     </div>
                   </div>
