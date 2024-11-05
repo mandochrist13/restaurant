@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Nav() {
+  
   const [isClient, setIsClient] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);

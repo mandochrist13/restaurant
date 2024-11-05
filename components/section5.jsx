@@ -24,15 +24,16 @@ export default function Section5() {
         </div>
       </div>
       <div className="w-[300px] md:w-full flex items-center justify-center">
-        <iframe
+        <frame
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d817.1478248698065!2d9.449987891513667!3d0.4185410359660749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x107f3b647fa9ea09%3A0x7314a12de1932d03!2sOgoou%C3%A9%20Labs!5e1!3m2!1sfr!2sga!4v1730720908642!5m2!1sfr!2sga"
           width="1300"
           height="300"
           style={{ border: 0 }}
           allowFullScreen
+          title="Carte Ogooué labs"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></frame>
       </div>
     </div>
   );

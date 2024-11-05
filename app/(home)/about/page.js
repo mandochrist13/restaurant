@@ -46,7 +46,7 @@ export default function Page() {
           alt="food"
           width={1000}
           height={1000}
-          className="w-[30%] absolute rounded-lg object-cover"
+          className="w-[30%] absolute object-cover"
         />
         <h1 className="text-[#DC2626] absolute text-xl md:text-6xl font-bold">
           A propos de nous
@@ -63,8 +63,8 @@ export default function Page() {
           language ocean.
         </p>
       </div>
-      <div class="flex flex-col md:flex-row justify-center items-center mx-5 mb-5 space-y-5 space-x-5">
-        <div class="flex flex-col justify-center items-center w-full md:h-full md:w-1/3 space-y-5">
+      <div className="flex flex-col md:flex-row justify-center items-center mx-5 mb-5 space-y-5 space-x-5">
+        <div className="flex flex-col justify-center items-center w-full md:h-full md:w-1/3 space-y-5">
           <Image
             src="/assets/card5.jpeg"
             alt="food"
@@ -73,7 +73,7 @@ export default function Page() {
             className="md:h-full w-[60%] md:w-full object-cover"
           />
         </div>
-        <div class="flex flex-col justify-center items-center w-full md:h-full md:w-1/3 space-y-5">
+        <div className="flex flex-col justify-center items-center w-full md:h-full md:w-1/3 space-y-5">
           <Image
             src="/assets/card1.jpeg"
             alt="food"
@@ -89,7 +89,7 @@ export default function Page() {
             className="md:h-full w-[60%] md:w-full object-cover"
           />
         </div>
-        <div class="flex flex-col justify-center items-center w-full md:h-full md:w-1/3 space-y-5">
+        <div className="flex flex-col justify-center items-center w-full md:h-full md:w-1/3 space-y-5">
           <Image
             src="/assets/card6.jpeg"
             alt="food"
