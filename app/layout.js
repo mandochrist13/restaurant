@@ -1,8 +1,6 @@
 
 import localFont from "next/font/local";
 import "./globals.css";
-import Nav  from "../components/Nav";
-import  Footer  from "../components/Footer";
 
 
 
@@ -23,16 +21,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
+ 
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      
         <div className="bg-white w-full min-h-svh">
-          <Nav />
+          
           {children}
-          <Footer />
+          
         </div>
       </body>
     </html>

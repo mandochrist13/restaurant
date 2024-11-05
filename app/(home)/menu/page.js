@@ -1,14 +1,13 @@
 "use client";
 
-import { Plat } from "../data/plat";
-import { Drink } from "../data/drink";
-import { Dessert } from "../data/dessert";
-import { Ptdej } from "../data/ptdej";
+import { Plat } from "../../data/plat";
+import { Drink } from "../../data/drink";
+import { Dessert } from "../../data/dessert";
+import { Ptdej } from "../../data/ptdej";
 import Image from "next/image";
-import Mets from "../../components/Mets";
-import Section4 from "@/components/section4";
+import Section4 from "../../../components/section4";
 import { useEffect, useState } from "react";
-import Preloader from "@/components/Preloader";
+import Preloader from "../../../components/Preloader";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState("burgers");
@@ -184,7 +183,7 @@ export default function Page() {
               </div>
 
               {/* Image Column for Snacks */}
-              <div className="hidden lg:flex">
+              <div className="hidden rounded-md lg:flex w-[30%]">
                 <Image
                   src="/assets/menu-snack-img.jpg"
                   width={1000}
@@ -233,7 +232,7 @@ export default function Page() {
               </div>
 
               {/* Image Column for Beverages */}
-              <div className="hidden lg:flex">
+              <div className="hidden rounded-md lg:flex w-[30%]">
                 <Image
                   src="/assets/menu-beverage-img.jpg"
                   width={1000}
@@ -282,7 +281,7 @@ export default function Page() {
               </div>
 
               {/* Image Column for Beverages */}
-              <div className="hidden lg:flex">
+              <div className="hidden rounded-md lg:flex w-[30%]">
                 <Image
                   src="/assets/menu-beverage-img.jpg"
                   width={1000}

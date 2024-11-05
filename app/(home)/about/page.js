@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Preloader from "@/components/Preloader";
-import Section1 from "@/components/section1";
-import Section5 from "@/components/section5";
+import Preloader from "../../../components/Preloader";
+import Section1 from "../../../components/section1";
+import Section5 from "../../../components/section5";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState("burgers");
@@ -42,6 +42,7 @@ export default function Page() {
         />
         <Image
           src="/assets/snow.gif"
+          unoptimized 
           alt="food"
           width={1000}
           height={1000}

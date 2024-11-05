@@ -39,7 +39,7 @@ export function Header() {
             </button>
             </Link>
             
-            <Link href="/menu">
+            <Link href="menu">
               <button className=" text-base lg:text-xl rounded-full bg-white border hover:scale-105 duration-150 border-red-600  px-4 py-1 text-red-600 ">
                 Voir notre menu
               </button>
