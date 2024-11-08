@@ -1,14 +1,8 @@
 "use client";
 
-import React from "react";
+import React, {useState} from "react";
 import { Input } from "@nextui-org/react";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-  Button,
-} from "@nextui-org/react";
+
 import { Field } from "@headlessui/react";
 
 export default function Section4() {
@@ -18,6 +12,64 @@ export default function Section4() {
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
     [selectedKeys]
   );
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [mail, setMail] = useState("");
+  const [gest, setGest] = useState(0);
+  const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
+
+  const handleSubmit = async () => {
+    console.log("début du traitement des données")
+    const data = {
+      name: name,
+      phone: phone,
+      email: mail,
+      guests: gest,
+      time: time,
+      date: date,}
+
+      console.log(data);
+
+    if (name.length ==0 || phone.length ==0 || mail.length ==0 || gest<0 || time.length ==0 || date.length ==0) {
+      
+      alert("Veuillez remplir tous les champs obligatoires.");
+      
+    } else {
+      try {
+        
+        
+        const response = await fetch (`https://api-saveur.onrender.com/reservations/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+        if (response.ok) {
+          alert("Votre réservation a bien été enregistrée!");
+          setName("");
+          setPhone("");
+          setMail("");
+          setGest(0);
+          setTime("");
+          setDate("");
+          console.log("response :", await response.json())
+        } else {
+          alert("Une erreur est survenue lors de l'enregistrement de votre réservation.");
+          console.log("response :", await response.json())
+        }
+      } catch (error) {
+        alert("Une erreur est survenue lors de l'enregistrement de votre réservation.");
+        console.log("Erreur :", error);
+      }
+      
+    }
+    
+  };
+  
+  
 
   return (
     <section
@@ -31,24 +83,7 @@ export default function Section4() {
         Êtes-vous prêt à commander votre meilleur plat?
       </h1>
       <div className="w-full max-w-[600px] rounded-lg bg-gradient-to-r from-amber-400 to-amber-200 px-4 lg:px-8">
-        {/* <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-          />
-        </div> */}
-        {/* <div className="bg-white rounded-b-lg p-2 md:mx-[15%] text-center">
-          <h2 className="text-balance  text-2xl md:text-4xl font-semibold tracking-tight text-black">
-            FORMULAIRE DE RESERVATION
-          </h2>
-          
-        </div> */}
+        
         <div
           className="py-10"
           style={{
@@ -58,13 +93,14 @@ export default function Section4() {
           <div className="container mx-auto">
             <div className="flex justify-center">
               <div className="w-full">
-                <form action="#">
+                <div>
                   <div className=" flex flex-col md:grid md:grid-cols-2 gap-5 justify-between items-center">
                     <div className="w-full mb-7 flex-1 mx-2">
                       <div className="boking-datepicker">
                         <input
                           id="datepicker1"
                           placeholder="Nom"
+                          value={name} onChange={(e) => setName(e.target.value)}
                           type="text"
                           className="border text-black rounded w-full py-2 px-3"
                         />
@@ -74,8 +110,9 @@ export default function Section4() {
                       <div className="boking-datepicker">
                         <input
                           id="datepicker1"
+                          value={phone} onChange={(e) => setPhone(e.target.value)}
                           placeholder="Numéro de téléphone"
-                          type="Phone Number"
+                          type="text"
                           className="border text-black rounded w-full py-2 px-3"
                         />
                       </div>
@@ -84,8 +121,9 @@ export default function Section4() {
                       <div className="boking-datepicker">
                         <input
                           id="datepicker1"
+                          value={mail} onChange={(e) => setMail(e.target.value)}
                           placeholder="Mail"
-                          type="mail"
+                          type="email"
                           className="border text-black rounded w-full py-2 px-3"
                         />
                       </div>
@@ -98,10 +136,12 @@ export default function Section4() {
                             <i className="ti-user text-yellow-500"></i>
                           </div>
                           <select
+                          value={gest} onChange={(e) => setGest(parseInt(e.target.value))}
                             name="persone"
                             id="select1"
                             className="appearance-none text-black pl-10 pr-4 py-2 border rounded w-full"
                           >
+                            <option value="">Selectionnez le nombre de personne</option>
                             <option value="1">1 Personne</option>
                             <option value="2"> 2 Personnes</option>
                             <option value="3">3 Personnes</option>
@@ -115,7 +155,8 @@ export default function Section4() {
                       <div className="boking-datepicker">
                         <input
                           id="datepicker1"
-                          placeholder="Date"
+                          value={date} onChange={(e) => setDate(e.target.value)}
+                          placeholder="yyyy-mm-dd"
                           type="text"
                           className="border text-black rounded w-full py-2 px-3"
                         />
@@ -126,7 +167,8 @@ export default function Section4() {
                       <div className="boking-datepicker">
                         <input
                           id="timepicker"
-                          placeholder="Heure"
+                          value={time} onChange={(e) => setTime(e.target.value)}
+                          placeholder="00:00"
                           type="text"
                           className="border text-black rounded w-full py-2 px-3"
                         />
@@ -136,13 +178,13 @@ export default function Section4() {
                   </div>
                   <div className="w-full">
                     <button
-                      type="submit"
+                      onClick={handleSubmit}
                       className="w-full bg-red-600 text-white rounded py-2 px-4 hover:bg-red-400 transition"
                     >
                       Réserver maintenant
                     </button>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>

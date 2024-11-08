@@ -1,16 +1,35 @@
 "use client";
 
-import { Plat } from "../../data/plat";
+//import { Plat } from "../../data/plat";
+import axios from 'axios';
 import { Drink } from "../../data/drink";
 import { Dessert } from "../../data/dessert";
 import { Ptdej } from "../../data/ptdej";
 import Image from "next/image";
 import Section4 from "../../../components/section4";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Preloader from "../../../components/Preloader";
+
+
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState("burgers");
+  const [foods, setFoods] = useState([]);
+  useEffect(() => {
+    async function fetchFood() {
+ 
+      const response = await fetch (`https://api-saveur.onrender.com/food/`)
+      const food = await response.json();
+     console.log(food);
+     setFoods(food);
+       
+      ;
+   
+    };
+   
+    fetchFood()
+  },[]);
+
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
@@ -25,6 +44,30 @@ export default function Page() {
     // Nettoyer le timer en cas de démontage
     return () => clearTimeout(timer);
   }, []);
+
+  const [Plat, setPlat] = useState([]);  // Initialiser l'état pour stocker les données
+  const [error, setError] = useState(null);  // Gérer les erreurs
+
+  // Fonction pour récupérer les données
+  const fetchFood = async () => {
+    try {
+      const response = await fetch(`https://api-saveur.onrender.com/food/`);
+      const food = await response.json();
+      setPlat(food.data || []);  // On suppose que la réponse contient une propriété 'data'
+    } catch (err) {
+      console.error("Erreur lors de la récupération des données :", err);
+      setError("Une erreur est survenue lors de la récupération des données.");
+    }
+  };
+
+  // Utiliser useEffect pour appeler fetchFood au moment du montage du composant
+  useEffect(() => {
+    fetchFood();
+  }, []);
+
+  if (error) {
+    return <div className="error-message">{error}</div>;  // Afficher une erreur si elle existe
+  }
 
   return (
     <section
@@ -101,14 +144,14 @@ export default function Page() {
             <div className="justify-center items-center flex flex-col md:flex-row gap-8">
               {/* Menu Items Column */}
               <div className="space-y-8 px-5">
-                {Plat.map((tab) => (
+                {foods.map((tab) => (
                   <div
                     key={tab.id}
                     className=" flex flex-col md:flex-row items-center gap-5"
                   >
                     <div className="menu-img w-20">
                       <Image
-                        src={tab.photo}
+                        src={tab.image}
                         width={140}
                         height={140}
                         alt="Mini Cheese Burger"
@@ -118,10 +161,10 @@ export default function Page() {
                     <div className="w-full">
                       <h3 className="text-sm md:text-xl font-bold relative">
                         <span className="inline-block pr-1 text-black bg-white relative z-10">
-                          {tab.titre}
+                          {tab.name}
                         </span>
                         <strong className="inline-block pl-1 float-right text-yellow-500 bg-white relative z-10">
-                          {tab.prix}
+                          {tab.price}
                         </strong>
                         <span className="absolute top-3 left-0 w-full border-t-2 border-dotted border-black z-0"></span>
                       </h3>
